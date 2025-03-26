@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import sideimg from "../../public/images/Sideimg5.png";
+import sideimg from "../../public/images/Sideimg8.png";
 
 import ScrollToBottomButton from "./ScrollBottom";
 
@@ -17,11 +17,11 @@ const Home = () => {
       >
         <div className="flex-1 text-center lg:text-left px-6 sm:px-12 lg:px-24 mt-16 sm:mt-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            The Future of Corporate Management Starts Here
+            The Future of <br/> Corporate  Management <br/> Starts Here
           </h1>
           <p className="mt-4 text-sm sm:text-lg text-gray-400 font-bold leading-6">
           Modern tools for law firms, investors, and founders.
-          Powered by secure,blockchain-backed infrastructure.
+          Powered by secure, blockchain-backed infrastructure.
           Trusted by forward-thinking firms and legal innovators.
           </p>
 

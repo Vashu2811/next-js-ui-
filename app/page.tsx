@@ -13,7 +13,7 @@ export default function MainApp() {
       <Home />
 
       {/* <Provider /> */}
-
+    
       <div >
         <SliderTest />
       </div>
