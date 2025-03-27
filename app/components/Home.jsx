@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import sideimg from "../../public/images/Sideimg9.png";
+import sideimg from "../../public/images/Sideimg1.png";
 
 import ScrollToBottomButton from "./ScrollBottom";
 
@@ -54,6 +54,12 @@ const Home = () => {
           />
         </div>
       </div>
+      <div className="flex-1 text-center  px-6 sm:px-12 lg:px-24 mt-16 sm:mt-12 mb-10">
+          <p className="mt-4 text-sm sm:text-lg text-gray-400 font-bold leading-6">
+          CorpRite’s method is officially published by the U.S. Patent Office — the first of its kind in <br />
+          blockchain-based corporate management. Publication No. US 2025/0094907 A1
+          </p>
+        </div>
     </>
   );
 };

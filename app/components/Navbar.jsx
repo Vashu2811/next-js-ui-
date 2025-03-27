@@ -49,13 +49,13 @@ const Navbar = () => {
         </li>
       </ul> */}
 
-      <div className="md:hidden flex items-center" onClick={toggleMenu}>
+      {/* <div className="md:hidden flex items-center" onClick={toggleMenu}>
         <button className="text-white focus:outline-none">
           <span className="block w-6 h-1 bg-white mb-1.5"></span>
           <span className="block w-6 h-1 bg-white mb-1.5"></span>
           <span className="block w-6 h-1 bg-white"></span>
         </button>
-      </div>
+      </div> */}
 
       {isMenuOpen && (
         <ul className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center gap-6 py-6 md:hidden">
