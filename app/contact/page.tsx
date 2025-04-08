@@ -1,36 +1,29 @@
 'use client';
+import { useState } from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaHome } from 'react-icons/fa';
 import { IoMailSharp } from 'react-icons/io5';
-import { TfiLinkedin } from 'react-icons/tfi';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BiLogoTiktok } from 'react-icons/bi';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { socialLinks,interestedOptions } from "@/app/constants";
 import CompanyLogo from '../../public/images/logoAct.png';
 
 const Contact = () => {
 
-  const socialLinks = [
-    { Icon: FaFacebookF, link: 'https://facebook.com', label: 'Facebook' },
-    { Icon: FaTwitter, link: 'https://twitter.com', label: 'Twitter' },
-    { Icon: FaInstagram, link: 'https://instagram.com', label: 'Instagram' },
-    { Icon: BiLogoTiktok, link: 'https://tiktok.com', label: 'TikTok' },
-    { Icon: TfiLinkedin, link: 'https://linkedin.com', label: 'LinkedIn' },
-    { Icon: AiOutlineMail, link: 'mailto:mail@incorporight.com', label: 'Email' },
-  ];
-
+  const [selectedOption, setSelectedOption] = useState('');
+  
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <Navbar />
 
       <header className="bg-black py-12 mt-16 md:mt-20 text-center">
-        <h1 className="text-white text-3xl sm:text-5xl font-bold">Contact</h1>
+        <h1 className="text-white text-3xl sm:text-5xl font-bold">Contact Us</h1>
       </header>
 
       <main className="flex flex-col md:flex-row gap-8 py-12 px-6 max-w-6xl mx-auto">
         <section className="w-full md:w-1/2">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Contact Us</h2>
-          <p className="text-lg mb-6">Looking for help? Fill out the form.</p>
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Get in Touch</h2>
+          <p className="text-lg mb-6">Looking to learn more or see a demo? Fill out the form and we’ll get back to you shortly.</p>
 
           <div className="flex flex-wrap gap-3 mb-6">
             {socialLinks.map(({ Icon, link, label }, idx) => (
@@ -63,13 +56,11 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="mt-8 flex justify-center">
-            <Image src={CompanyLogo} alt="Company Logo" width={200} height={150} />
-          </div>
+          
         </section>
 
         <section className="w-full md:w-1/2 bg-white text-black rounded-lg shadow-lg p-6">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-6">Let&apos;s Connect</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-6">Reach Out to Our Team</h2>
           <form >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
@@ -120,7 +111,63 @@ const Contact = () => {
               </div>
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label htmlFor="company" className="block text-sm font-semibold mb-2">
+                  Company
+                </label>
+                <input
+                  id="company"
+                  type="text"
+                  className="w-full p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
+              <div>
+                <label htmlFor="title" className="block text-sm font-semibold mb-2">
+                  Title
+                </label>
+                <input
+                  id="title"
+                  type="text"
+                  className="w-full p-3 border border-gray-300 rounded-lg"
+                />
+              </div>
+            </div>
             <div className="mb-4">
+              <label htmlFor="help" className="block text-sm font-semibold mb-2">
+                I'm interested in:
+              </label>
+              <select
+                id="help"
+                className="w-full p-3 border border-gray-300 rounded-lg bg-white"
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.target.value)}
+                required
+              >
+                {interestedOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {
+              selectedOption === "other" && (
+                <div className="mb-4">
+                  <label htmlFor="other" className="block text-sm font-semibold mb-2">
+                    Other
+                  </label>
+                  <input
+                    id="other"
+                    type="text"
+                    className="w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                </div>
+              )
+            }    
+            
+
+            {/* <div className="mb-4">
               <label htmlFor="subject" className="block text-sm font-semibold mb-2">
                 Subject
               </label>
@@ -141,41 +188,19 @@ const Contact = () => {
                 className="w-full p-3 border border-gray-300 rounded-lg"
                 required
               ></textarea>
-            </div>
+            </div> */}
 
             <button
               type="submit"
               className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
             >
-              Send Message
+              Submit
             </button>
           </form>
         </section>
       </main>
 
-      <footer className="bg-black py-6">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between">
-        <ul className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-3">
-              <li><span className="text-white">©2025 Corprite</span></li>
-              <li><a href="https://incorporight.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline transition-colors">Privacy Policy</a></li>
-              <li><a href="https://incorporight.com/terms-of-service/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline transition-colors">Terms of Service</a></li>
-            </ul>
-          <div className="flex gap-4">
-            {socialLinks.map(({ Icon, link, label }, idx) => (
-              <a
-                key={idx}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="text-white text-xl hover:text-gray-400 transition"
-              >
-                <Icon />
-              </a>
-            ))}
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import ScrollToTopButton from "./ScrollTop";
 import "./style.css";
 
 const About = () => {
+  
   return (
     <div className="bg-black">
       <div
@@ -109,7 +110,7 @@ const About = () => {
                 </li>
                 <li>
                   <a
-                    href="https://incorporight.com/privacy-policy/"
+                    href={`${process.env.NEXT_PUBLIC_APP_URL}privacy-policy/`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:underline transition-colors"
@@ -119,7 +120,7 @@ const About = () => {
                 </li>
                 <li>
                   <a
-                    href="https://incorporight.com/terms-of-service/"
+                    href={`${process.env.NEXT_PUBLIC_APP_URL}terms-of-service/`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:underline transition-colors"
@@ -131,7 +132,7 @@ const About = () => {
 
               <div className="flex justify-center gap-6">
                 <a
-                  href="https://twitter.com/"
+                  href="https://x.com/incorporight"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -149,7 +150,7 @@ const About = () => {
                   />
                 </a>
                 <a
-                  href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fincorporight%2F&is_from_rle"
+                  href="https://www.instagram.com/corpriteco/?igsh=XFqNHVqeHhxbTJw"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
