@@ -1,5 +1,4 @@
 'use client';
-
 import Navbar from '../components/Navbar';
 import Footer from "../components/Footer";
 
@@ -16,17 +15,12 @@ const PrivacyPolicyPage = () => {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-white mb-4">1. Overview</h2>
             <p className="mb-4">
-              This Privacy Policy outlines how INCORPORIGHT INC., operating under the
-              brand name CorpRite ("CorpRite", "we", or "us"), collects, uses,
-              stores, and protects personal information and other data provided by
-              users ("you") through our website (www.corprite.co), any subdomain
-              (e.g., company.corprite.co), or any related services (collectively, the
-              "Platform").
+              {`This Privacy Policy outlines how INCORPORIGHT INC., operating under the brand name CorpRite ("CorpRite", "we", or "us"), collects, uses, stores, and protects personal information and other data provided by users ("you") through our website (www.corprite.co), any subdomain (e.g., company.corprite.co), or any related services (collectively, the "Platform").`}
             </p>
             <p>
               This Privacy Policy applies to all users of the Platform, including
               those accessing via white-labeled instances provided by authorized
-              partners ("Partners"). It should be read together with our Terms of
+              partners (&quot;Partners&quot;). It should be read together with our Terms of
               Use.
             </p>
           </section>
@@ -128,7 +122,7 @@ const PrivacyPolicyPage = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-xl font-semibold text-white mb-4">9. Children's Privacy</h2>
+            <h2 className="text-xl font-semibold text-white mb-4">9. Children&apos;s Privacy</h2>
             <p>
               The Platform is not directed at individuals under 18 years of age. We do
               not knowingly collect personal information from children.
@@ -158,6 +152,7 @@ const PrivacyPolicyPage = () => {
           </section>
         </div>
       </main>
+
 
       <Footer />
     </div>

@@ -1,12 +1,11 @@
 'use client';
 import { useState } from 'react';
-import { FaFacebookF, FaInstagram, FaTwitter, FaHome } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { IoMailSharp } from 'react-icons/io5';
-import Image from 'next/image';
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { socialLinks,interestedOptions } from "@/app/constants";
-import CompanyLogo from '../../public/images/logoAct.png';
 
 const Contact = () => {
 
@@ -135,7 +134,7 @@ const Contact = () => {
             </div>
             <div className="mb-4">
               <label htmlFor="help" className="block text-sm font-semibold mb-2">
-                I'm interested in:
+                I&rsquo;m interested in:
               </label>
               <select
                 id="help"
